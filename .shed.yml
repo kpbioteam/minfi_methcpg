@@ -1,0 +1,7 @@
+categories: [Epigenetics]
+description: This tool obtain methylated and unmethylated intensities matrices from
+  MethylSet-class
+homepage_url: https://github.com/kpbioteam/minfi_methcpg
+name: minfi_methcpg
+owner: kpbioteam
+remote_repository_url: https://github.com/kpbioteam/minfi_methcpg

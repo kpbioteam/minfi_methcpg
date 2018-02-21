@@ -1,0 +1,29 @@
+<tool id="minfi_methcpg" name="minfi_methcpg" version="0.1.0">
+    <description>obtain methylated and unmethylated intensities matrices</description>
+    <requirements>
+        <requirement type="package" version="1.24.0">bioconductor-minfi</requirement>
+    </requirements>
+    <command detect_errors="exit_code"><![CDATA[
+        Rscript  ${__tool_directory__}/minfi_methcpg.R  "$input1" "$output1" "$output2"
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="rdata" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="txt" label="methcpg.txt" />
+        <data name="output2" format="txt" label="unmethcpg.txt" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="MSet.rdata"/>
+            <output name="output1" file="methcpg.txt"/>
+            <output name="output2" file="unmethcpg.txt"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        This tool obtain methylated and unmethylated intensities matrices from MethylSet-class
+    ]]></help>
+    <citations>
+        <citation type="doi">10.1093/bioinformatics/btu049</citation>
+    </citations>
+</tool>
